@@ -8,7 +8,6 @@ make changes in the .env file remove DB_DATABASE line and Add new information li
 - LANDLORD_DB_DATABASE=landlord
 - LANDLORD_DB_USERNAME=YOUR DB USERNAME
 - LANDLORD_DB_PASSWORD=YOUR DB PASSWORD
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
 ## Steps
 1.create migration and add tenants table in defoult database
