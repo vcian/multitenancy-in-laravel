@@ -28,4 +28,4 @@ make new command for all migration in specific tenant or in all tenants
 ##### php artisan tenants:migrate --fresh --seed
 
 6.if you want specific tenant migrate database
-##### php artisan tenants:migrate --fresh --seed
+##### php artisan tenants:migrate laravel
