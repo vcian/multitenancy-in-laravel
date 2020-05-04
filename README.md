@@ -16,7 +16,7 @@ make changes in the .env file remove DB_DATABASE line and Add new information li
 2.add seed and database information in tenants table
 ##### php artisan migrate:fresh --database=landlord --path=database/migrations/landlord --seed  
 
-all migration in specific tenant or in all tenants we make new command
+make new command for all migration in specific tenant or in all tenants 
 
 3.in all tenants migrate database
 ##### php artisan tenants:migrate
