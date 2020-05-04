@@ -6,8 +6,8 @@
 	<li><code>composer install</code></li>
 	<li>Doesn't .env file into root folder then please copy from .env.example to .env <code>cp .env.example .env</code></li>
 </ul>
-### Setup database into environment file
 
+### Setup database into environment file
 
 Make changes in the .env file remove DB_DATABASE line and Add new information like:
 <ul>
