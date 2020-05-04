@@ -1,4 +1,5 @@
 <h2 align="center">Multitenancy in laravel</h2>
+
 ## About Laravel
 
 make changes in the .env file remove DB_DATABASE line and Add new information like:
