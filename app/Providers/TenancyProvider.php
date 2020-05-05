@@ -25,7 +25,7 @@ class TenancyProvider extends ServiceProvider
     public function configureRequests(){
         if(! $this->app->runningInConsole()) {
             $host = $this->app['request']->getHost();
-            Tenant::whereDomain($host)->firstOrFail()->use();
+            Tenant::where('domain',$host)->firstOrFail()->configure()->use();
         }
     }
 
@@ -33,14 +33,14 @@ class TenancyProvider extends ServiceProvider
      *
      */
     public function configureQueue(){
-        $this->app['queue']->createPayloadUsing(function () {
-            return $this->app['tenant'] ? ['tenant_id' => $this->app['tenant']->id] : [];
-        });
-
-        $this->app['event']->listen(JobProcessing::class, function ($event) {
-            if(isset($event->job->payload()['tenant_id'])) {
-                Tenant::find($event->job->payload()['tenant_id'])->configure()->use();
-            }
-        });
+//        $this->app['queue']->createPayloadUsing(function () {
+//            return $this->app['tenant'] ? ['tenant_id' => $this->app['tenant']->id] : [];
+//        });
+//
+//        $this->app['event']->listen(JobProcessing::class, function ($event) {
+//            if(isset($event->job->payload()['tenant_id'])) {
+//                Tenant::find($event->job->payload()['tenant_id'])->configure()->use();
+//            }
+//        });
     }
 }
